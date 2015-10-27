@@ -1,0 +1,48 @@
+/*
+ * Naver Plugin [Formstone Library]
+ * @author Ben Plum
+ * @version 0.0.9
+ *
+ * Copyright © 2013 Ben Plum <mr@benplum.com>
+ * Released under the MIT License <http://www.opensource.org/licenses/mit-license.php>
+ */
+ 
+ 	.naver .naver-handle { color: #333; cursor: pointer; display: none; font-size: 12px; font-size: 1.2rem;
+	height: 24px; height: 2.4rem;
+	line-height: 18px; line-height: 1.8rem;
+	 	-webkit-user-select: none;
+		   -moz-user-select: none;
+		    -ms-user-select: none;
+		     -o-user-select: none;
+			    user-select: none;
+ 	}
+ 	.naver .naver-handle:before { background: url(../images/fs-naver-icon.png) no-repeat center; background-size: contain; content: ''; display: inline-block; vertical-align: middle; height: 15px; height: 1.5rem; margin: -2px 10px 0 0; margin: -.2rem 1rem 0 0; width: 20px; width: 2rem; }
+ 	.naver .naver-wrapper { height: auto; }
+ 	.naver .naver-container:after { clear: both; content: "."; display: block; height: 0; line-height: 0; visibility: hidden; }
+ 	
+ 	@media screen and (min-width: 1000px) {
+ 		.naver .naver-wrapper { height: auto !important; }
+ 	}
+ 	
+	@media screen and (max-width: 1000px) {
+		/* Mobile Only */
+		.naver.active .naver-handle { display: block; }
+		.naver.active .naver-wrapper { height: 0px; overflow: hidden; }
+		
+		/* Animated - Experimental! Performs poorly on mobile */
+		.naver.animated .naver-wrapper {
+			-webkit-transition: height .4s cubic-bezier(0.19, 1, 0.22, 1);
+			   -moz-transition: height .4s cubic-bezier(0.19, 1, 0.22, 1);
+			    -ms-transition: height .4s cubic-bezier(0.19, 1, 0.22, 1);
+			     -o-transition: height .4s cubic-bezier(0.19, 1, 0.22, 1);
+			        transition: height .4s cubic-bezier(0.19, 1, 0.22, 1);
+		}
+		.naver.animated .naver-container { opacity: 0; 
+			-webkit-transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1);
+			   -moz-transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1);
+			    -ms-transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1);
+			     -o-transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1);
+			        transition: opacity .4s cubic-bezier(0.19, 1, 0.22, 1);
+		}
+		.naver.animated.open .naver-container { opacity: 1; }
+	}
