@@ -388,7 +388,25 @@ if($aimg) { ?>
 <meta property="og:image" content="<?php echo $aimg[0]; ?>" />
 <?php } } ?>
 <meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/logofb.jpg" />
-
+<style type="text/css">
+	.instagram-top {
+	margin: 20px 0;
+	}
+	.instagram-top .instagram-placeholder {
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	}
+	.instagram-top .instagram-placeholder:nth-of-type(n+7) {
+	display: none !important;
+	}
+	.instagram-top .instagram-placeholder a:hover {
+	opacity: .7;
+	}
+	.instagram-top .instagram-placeholder > * {
+	display: block;
+	}
+</style>
 </head>
 
 <body <?php if($detect->isMobile()) { body_class('mobile top-banner'); } else { body_class('desktop'); } ?>>
