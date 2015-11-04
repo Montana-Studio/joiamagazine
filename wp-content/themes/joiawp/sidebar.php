@@ -97,9 +97,10 @@ drawAdsPlace(array('id' => 6), array('before' => '<div class="ad banner_holder">
 
 <aside id="tumblr">
 
-<h4 style="margin-bottom: 15px; margin-bottom: 1.5rem;"><a href="http://joiamagazine.tumblr.com" target="_blank">JOIA Tumblr &raquo;</a></h4>
-<?php if ( dynamic_sidebar('Widgets 2') ) : else : endif; ?>
-
+<h4 style="margin-bottom: 15px; margin-bottom: 1.5rem;">
+  <a href="http://joiamagazine.tumblr.com" target="_blank">JOIA Tumblr &raquo;</a>
+</h4>
+  <?php if ( dynamic_sidebar('Widgets 2') ) : else : endif; ?>
 </aside>
 
 <?php if(function_exists('drawAdsPlace')) {
